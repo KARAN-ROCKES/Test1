@@ -8,3 +8,15 @@ with request.urlopen('https://data.cdc.gov/resource/v2pi-w3up.json') as response
         print('An error')
         
         
+ pip install pymongo
+ #pusing data to mongo
+ 
+import pymongo
+from pymongo import MongoClient
+import urllib.parse
+
+client = pymongo.MongoClient("mongodb://localhost:27017/")
+
+mydb = client["dap"]
+mycol = mydb["x"]
+mycol.insert_many(data)
