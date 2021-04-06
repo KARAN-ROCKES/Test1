@@ -1,0 +1,10 @@
+import pymongo
+from pymongo import MongoClient
+import urllib.parse
+
+client = pymongo.MongoClient("mongodb://localhost:27017/")
+
+mydb = client["dap"]
+mycol = mydb["x"]
+
+mycol.insert_many(data)
