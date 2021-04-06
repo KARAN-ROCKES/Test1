@@ -1,0 +1,9 @@
+myclient = MongoClient("mongodb://localhost:27017/")
+db = myclient["daptest2"]
+col = db['test2']
+x = col.find()
+
+for data in x:
+    print(data)
+  
+data["results"]
